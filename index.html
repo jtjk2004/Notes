@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email confirmed | Private Notes</title>
+  <meta name="description" content="Email confirmation redirect page for Private Notes.">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="center-shell">
+    <section class="status-card" id="status-card">
+      <div class="mark large">PN</div>
+      <p class="eyebrow" id="eyebrow">Checking confirmation</p>
+      <h1 id="title">One moment...</h1>
+      <p class="lead" id="message">
+        We are reading the confirmation result from Supabase.
+      </p>
+      <div class="actions centered">
+        <a class="button primary" href="privatenotes://auth-callback/">Open app</a>
+        <a class="button" href="/">Back to site</a>
+      </div>
+      <p class="small" id="details"></p>
+    </section>
+  </main>
+
+  <script src="/assets/auth-callback.js"></script>
+</body>
+</html>

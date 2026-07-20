@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private Notes</title>
+  <meta name="description" content="A private, local-first notes app with selective cloud sync.">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="brand">
+        <div class="mark">PN</div>
+        <span>Private Notes</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="copy">
+          <p class="eyebrow">Local first. Cloud by choice.</p>
+          <h1>Private Notes</h1>
+          <p class="lead">
+            A clean notebook for folders, searchable notes, page modes, drawings,
+            and optional Supabase sync when you choose to save a note online.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="/auth/callback/">Email verification page</a>
+            <a class="button" href="#privacy">Privacy model</a>
+          </div>
+        </div>
+
+        <div class="preview" aria-label="Notes app preview">
+          <div class="preview-sidebar">
+            <div class="dot"></div>
+            <div class="line wide"></div>
+            <div class="line"></div>
+            <div class="line short"></div>
+          </div>
+          <div class="preview-note">
+            <div class="note-title"></div>
+            <div class="note-line"></div>
+            <div class="note-line"></div>
+            <div class="note-line short"></div>
+            <div class="note-card">
+              <span>Card</span>
+              <span>Cloud off</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section">
+      <h2>What sync means</h2>
+      <div class="cards">
+        <article>
+          <h3>Local by default</h3>
+          <p>New notes stay on the device unless cloud sync is turned on for that note.</p>
+        </article>
+        <article>
+          <h3>Account restore</h3>
+          <p>Cloud-enabled folders and notes can be restored after signing in on another device.</p>
+        </article>
+        <article>
+          <h3>Email confirmation</h3>
+          <p>This site also works as the Supabase redirect target after a user confirms their email.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

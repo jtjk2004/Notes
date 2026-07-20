@@ -4,6 +4,7 @@
   const eyebrow = document.getElementById("eyebrow");
   const details = document.getElementById("details");
   const card = document.getElementById("status-card");
+  const appLink = document.getElementById("app-link");
 
   const query = new URLSearchParams(window.location.search);
   const hash = new URLSearchParams(window.location.hash.replace(/^#/, ""));
@@ -27,6 +28,19 @@
   const type = query.get("type") || hash.get("type");
   const code = query.get("code") || hash.get("code");
   const accessToken = hash.get("access_token");
+  const lockReset = query.get("lock_reset");
+
+  if (lockReset) {
+    const target = `privatenotes://auth-callback/?lock_reset=${encodeURIComponent(lockReset)}`;
+    appLink.href = target;
+    card.classList.add("success");
+    eyebrow.textContent = "Identity verified";
+    title.textContent = "Reset file password";
+    message.textContent = "Open Private Notes on the signed-in device to choose a new password.";
+    details.textContent = "This reset only works for the account and device that requested it.";
+    window.setTimeout(() => window.location.assign(target), 650);
+    return;
+  }
 
   card.classList.add("success");
   eyebrow.textContent = "Email confirmed";
